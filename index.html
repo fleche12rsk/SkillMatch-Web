@@ -5,8 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkillMatch Web</title>
     <meta name="description" content="A simple HTML document">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
-    
+    <header>
+        <a href="#inicio">
+            <span id="nav-tittle">S</span><span>killMatch</span>
+        </a>
+        <nav>
+            <button id="nav-menu" hidden></button>
+            <ul>
+                <li><a href="#formulario_candidato">Formulário</a></li>
+                <li><a href="#resultado_vaga">Vagas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+    </main>
+
+
+    <section id="formulario_candidato">
+        <form action="" id="formulario">
+            <label for="name">Nome:</label>
+            <input type="text">
+            <br>
+            <label for="area">Área:</label>
+            <input type="text">
+            <br>
+            <label for="habilidades">Habilidades:</label>
+            <select name="tipos-de-habilidades" id="tipos_habilidades" multiple>
+                <!--Vagas Habilidades-->>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="git">Git</option>
+                <option value="flexbox">FlexBox</option>
+                <option value="responsividade">Responsividade</option>
+                <option value="bootstrap">BootStrap</option>
+                <option value="sass">Sass</option>
+                <option value="dom">DOM</option>
+                <option value="fetch-api">Fetch/API</option>
+                <option value="es6">ES6</option>
+                <option value="async-await">Async/Await</option>
+                <option value="npm">npm</option>
+                <option value="figma">Figma</option>
+                <option value="acessibilidade">Acessibilidade</option>
+                <option value="seo">SEO</option>
+            </select>
+        </form>
+    </section>
+
+
+    <section id="resultado_vaga">
+        
+    </section>
+
+
+    <footer id="footer">
+        <div>
+            <p>©2026 <a href="https://micio.dev">Mauricio Renato Sardá Filho</a> Todos os direitos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>
