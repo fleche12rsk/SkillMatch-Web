@@ -1,6 +1,39 @@
 * {
-    /* height: 0;
-    width: 0; */
+    margin: 0;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
+}
+
+#navbar {
+    display: flex;
+    height: 70px;
+    background-color: #927f7f;
+    align-items: center;
+}
+
+#nav {
+    display: flex; 
+    flex: 1;
+}
+
+#nav-tittle {
+    justify-content: center;
+    margin-left: 30px;
+}
+
+#nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    flex: 1;
+}
+
+#main {
+    height: 100vh;
+}
+
+#formulario_candidato {
+    height: 100vh;
 }
