@@ -1,0 +1,382 @@
+[
+  {
+    "id": 1,
+    "empresa": "FrontTech",
+    "cargo": "Desenvolvedor Front-End 6",
+    "area": "front-end",
+    "requisitos": ["html", "css", "javascript", "git"],
+    "salario": 2500,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 2,
+    "empresa": "NuvemSoft",
+    "cargo": "Desenvolvedor Web 6",
+    "area": "front-end",
+    "requisitos": ["html", "css", "javascript", "bootstrap", "git"],
+    "salario": 2700,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 3,
+    "empresa": "StartUpX",
+    "cargo": "Front-End Trainee",
+    "area": "front-end",
+    "requisitos": ["html", "css", "javascript", "responsividade"],
+    "salario": 1800,
+    "modalidade": "Híbrido",
+    "experienciaMes": "0"
+  },
+  {
+    "id": 4,
+    "empresa": "WebCraft",
+    "cargo": "Front-End 6",
+    "area": "front-end",
+    "requisitos": ["html", "css", "javascript", "dom", "git"],
+    "salario": 2600,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 5,
+    "empresa": "CloudDev",
+    "cargo": "Desenvolvedor Front-End 24",
+    "area": "front-end",
+    "requisitos": ["html", "css", "javascript", "es6", "dom", "fetch-api", "git"],
+    "salario": 4600,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 6,
+    "empresa": "CodeWave",
+    "cargo": "Desenvolvedor Front-End",
+    "area": "front-end",
+    "requisitos": ["javascript", "es6", "dom", "fetch-api", "git", "npm"],
+    "salario": 4200,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 7,
+    "empresa": "SistemasBR",
+    "cargo": "Desenvolvedor Front-End 60",
+    "area": "front-end",
+    "requisitos": ["html", "css", "javascript", "es6", "dom", "fetch-api", "async-await", "npm", "git"],
+    "salario": 7000,
+    "modalidade": "Presencial",
+    "experienciaMes": "60"
+  },
+  {
+    "id": 8,
+    "empresa": "AppMakers",
+    "cargo": "Front-End Estagiário",
+    "area": "front-end",
+    "requisitos": ["html", "css", "git"],
+    "salario": 1400,
+    "modalidade": "Presencial",
+    "experienciaMes": "0"
+  },
+  {
+    "id": 9,
+    "empresa": "PixelStudio",
+    "cargo": "Desenvolvedor de Interfaces UI",
+    "area": "ui-ux-design",
+    "requisitos": ["html", "css", "flexbox", "responsividade", "figma", "acessibilidade"],
+    "salario": 3000,
+    "modalidade": "Presencial",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 10,
+    "empresa": "AgênciaDigital",
+    "cargo": "Maquetador Web",
+    "area": "ui-ux-design",
+    "requisitos": ["html", "css", "sass", "flexbox", "responsividade"],
+    "salario": 2300,
+    "modalidade": "Presencial",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 11,
+    "empresa": "DesignHub",
+    "cargo": "Desenvolvedor UI/Front-End",
+    "area": "ui-ux-design",
+    "requisitos": ["html", "css", "figma", "acessibilidade", "responsividade", "flexbox"],
+    "salario": 3400,
+    "modalidade": "Híbrido",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 12,
+    "empresa": "MarketPlaceZ",
+    "cargo": "Front-End com foco em SEO",
+    "area": "ui-ux-design",
+    "requisitos": ["html", "css", "seo", "acessibilidade", "responsividade"],
+    "salario": 3600,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 13,
+    "empresa": "CriativaWeb",
+    "cargo": "Designer Front-End",
+    "area": "ui-ux-design",
+    "requisitos": ["html", "css", "figma", "sass", "flexbox"],
+    "salario": 3100,
+    "modalidade": "Híbrido",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 14,
+    "empresa": "Studio9",
+    "cargo": "UI Developer",
+    "area": "ui-ux-design",
+    "requisitos": ["html", "css", "figma", "bootstrap", "responsividade", "acessibilidade"],
+    "salario": 3300,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 15,
+    "empresa": "VisualSoft",
+    "cargo": "Desenvolvedor de UI 24",
+    "area": "ui-ux-design",
+    "requisitos": ["html", "css", "sass", "flexbox", "figma", "responsividade", "seo"],
+    "salario": 4000,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 16,
+    "empresa": "DataCore",
+    "cargo": "Desenvolvedor Back-End 6",
+    "area": "back-end",
+    "requisitos": ["node", "express", "sql", "git"],
+    "salario": 3200,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 17,
+    "empresa": "ServerPro",
+    "cargo": "Desenvolvedor Node.js",
+    "area": "back-end",
+    "requisitos": ["node", "express", "api-rest", "mongodb", "git"],
+    "salario": 4500,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 18,
+    "empresa": "APIWorks",
+    "cargo": "Desenvolvedor Back-End",
+    "area": "back-end",
+    "requisitos": ["node", "express", "api-rest", "sql", "git"],
+    "salario": 4300,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 19,
+    "empresa": "PyLabs",
+    "cargo": "Desenvolvedor Python",
+    "area": "back-end",
+    "requisitos": ["python", "sql", "api-rest", "git"],
+    "salario": 4100,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 20,
+    "empresa": "JavaSystems",
+    "cargo": "Desenvolvedor Java 6",
+    "area": "back-end",
+    "requisitos": ["java", "sql", "git"],
+    "salario": 3000,
+    "modalidade": "Presencial",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 21,
+    "empresa": "BackendHub",
+    "cargo": "Desenvolvedor Back-End 60",
+    "area": "back-end",
+    "requisitos": ["node", "express", "mongodb", "sql", "api-rest", "git"],
+    "salario": 7500,
+    "modalidade": "Híbrido",
+    "experienciaMes": "60"
+  },
+  {
+    "id": 22,
+    "empresa": "LegacyTech",
+    "cargo": "Desenvolvedor PHP",
+    "area": "back-end",
+    "requisitos": ["php", "sql", "api-rest", "git"],
+    "salario": 2800,
+    "modalidade": "Presencial",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 23,
+    "empresa": "CloudAPI",
+    "cargo": "Desenvolvedor de APIs",
+    "area": "back-end",
+    "requisitos": ["node", "api-rest", "mongodb", "express"],
+    "salario": 4800,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 24,
+    "empresa": "FullWave",
+    "cargo": "Desenvolvedor Full-Stack 6",
+    "area": "fullstack",
+    "requisitos": ["html", "css", "javascript", "node", "express", "git"],
+    "salario": 3800,
+    "modalidade": "Híbrido",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 25,
+    "empresa": "OmniDev",
+    "cargo": "Desenvolvedor Full-Stack",
+    "area": "fullstack",
+    "requisitos": ["html", "css", "javascript", "dom", "node", "api-rest", "sql", "git"],
+    "salario": 5500,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 26,
+    "empresa": "StackForce",
+    "cargo": "Full-Stack 24",
+    "area": "fullstack",
+    "requisitos": ["javascript", "es6", "node", "express", "mongodb", "git"],
+    "salario": 5200,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 27,
+    "empresa": "TotalCode",
+    "cargo": "Desenvolvedor Full-Stack 60",
+    "area": "fullstack",
+    "requisitos": ["html", "css", "javascript", "es6", "node", "express", "sql", "api-rest", "git"],
+    "salario": 8000,
+    "modalidade": "Presencial",
+    "experienciaMes": "60"
+  },
+  {
+    "id": 28,
+    "empresa": "WebSphere",
+    "cargo": "Full-Stack 6",
+    "area": "fullstack",
+    "requisitos": ["html", "css", "javascript", "node", "sql", "git"],
+    "salario": 3600,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 29,
+    "empresa": "DevHouse",
+    "cargo": "Desenvolvedor Full-Stack",
+    "area": "fullstack",
+    "requisitos": ["html", "css", "javascript", "dom", "fetch-api", "node", "express", "git"],
+    "salario": 5000,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 30,
+    "empresa": "ByteBuilders",
+    "cargo": "Full-Stack com Python",
+    "area": "fullstack",
+    "requisitos": ["html", "css", "javascript", "python", "sql", "api-rest", "git"],
+    "salario": 5300,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 31,
+    "empresa": "MobileFirst",
+    "cargo": "Desenvolvedor Mobile 6",
+    "area": "mobile",
+    "requisitos": ["javascript", "react-native", "git"],
+    "salario": 3500,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 32,
+    "empresa": "AppNation",
+    "cargo": "Desenvolvedor Flutter",
+    "area": "mobile",
+    "requisitos": ["flutter", "dart", "git"],
+    "salario": 4000,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 33,
+    "empresa": "iCode",
+    "cargo": "Desenvolvedor iOS",
+    "area": "mobile",
+    "requisitos": ["swift", "git", "api-rest"],
+    "salario": 5000,
+    "modalidade": "Presencial",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 34,
+    "empresa": "DroidWorks",
+    "cargo": "Desenvolvedor Android",
+    "area": "mobile",
+    "requisitos": ["kotlin", "git", "api-rest"],
+    "salario": 4800,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 35,
+    "empresa": "QualityLab",
+    "cargo": "Analista de QA 6",
+    "area": "qa",
+    "requisitos": ["qa-manual", "git"],
+    "salario": 2800,
+    "modalidade": "Remoto",
+    "experienciaMes": "6"
+  },
+  {
+    "id": 36,
+    "empresa": "TestPro",
+    "cargo": "QA Automation",
+    "area": "qa",
+    "requisitos": ["javascript", "cypress", "git", "api-rest"],
+    "salario": 4200,
+    "modalidade": "Híbrido",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 37,
+    "empresa": "BugHunters",
+    "cargo": "Engenheiro de Testes",
+    "area": "qa",
+    "requisitos": ["javascript", "jest", "selenium", "git"],
+    "salario": 4500,
+    "modalidade": "Remoto",
+    "experienciaMes": "24"
+  },
+  {
+    "id": 38,
+    "empresa": "SafeCode",
+    "cargo": "Analista de Testes",
+    "area": "qa",
+    "requisitos": ["selenium", "api-rest", "sql", "git"],
+    "salario": 3600,
+    "modalidade": "Presencial",
+    "experienciaMes": "6"
+  }
+]
