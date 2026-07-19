@@ -1,14 +1,36 @@
-* {
+:root {
+    /* base */
+    --cor-primaria: #581480;        /* azul principal (botões, links) */
+    --cor-primaria-escura: #422353; /* hover do botão */
+    --cor-fundo: #fffaec;           /* fundo da página */
+    --cor-card: #b6b1b2be;            /* fundo dos cards */
+    --cor-borda: #e2e8f0;           /* bordas suaves */
+    --cor-botao: #a8a8a8;           /* botão */
+
+    /* texto */
+    --cor-texto: #494949 ;           /* texto principal */
+    --cor-texto-suave: #b1afaf;     /* texto secundário (área, modalidade) */
+}
+
+body {
     margin: 0;
-    text-decoration: none;
     font-family: "Montserrat", sans-serif;
-    color: #000;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+#nav-tittle-s {
+    color: var(--cor-primaria);
 }
 
 #navbar {
     display: flex;
     height: 70px;
-    background-color: #927f7f;
     align-items: center;
 }
 
@@ -20,10 +42,6 @@
 #nav-tittle {
     justify-content: center;
     margin-left: 30px;
-}
-
-#nav-tittle-s {
-    color: #fff;
 }
 
 #nav-list {
@@ -39,9 +57,6 @@
     height: 100vh;
 }
 
-#formulario_candidato {
-    height: 100vh;
-}
 
 #nav-cel {
     display: none;
@@ -72,4 +87,115 @@
         padding: 0;
         font-size: 24px;
     }
+}
+
+#formulario_candidato {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#formulario {
+    background-color: var(--cor-card);
+    padding: 5px 20px 20px 20px;
+    border-radius: 15px;
+    margin: 40px;
+    height: fit-content;
+}
+
+#form-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bolder;
+}
+
+#btn-areas {
+    cursor: pointer;
+    border: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-botao);
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#btn-habilidades {
+    cursor: pointer;
+    border: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-botao);
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.card-section {
+    margin-bottom: 10px;
+}
+
+.card-section input {
+    border: none; 
+    background-color: var(--cor-botao);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#habilidades-chekbox {
+    display: none;
+} 
+
+#area-chekbox {
+    display: none;
+}
+
+#habilidades-chekbox.menu-aberto {
+    display: block;
+}
+
+#area-chekbox.menu-aberto {
+    display: block;
+}
+
+
+
+
+#btn-enviar {
+    cursor: pointer;
+    border: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-botao);
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#vaga-empresas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.vagas-card {
+    background-color: var(--cor-card);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color: #474747;
+    color: rgb(15, 15, 15);
+    height: 9vh;
+    align-items: center;
+}
+
+#footer a {
+    color: rgb(15, 15, 15);
 }

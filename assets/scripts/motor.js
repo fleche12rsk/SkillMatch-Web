@@ -20,7 +20,7 @@ class VagaFrontEnd extends Vaga {
   }
 
   exibirTrabalho() {
-    return `É necessário que tenha ${this.experienciaMes} meses de experiência para conseguir atender os requisitos da vaga de ${this.empresa}`;
+    return `É necessário que tenha ${this.experienciaMes} meses de experiência para conseguir atender os requisitos da vagas de ${this.empresa}`;
   }
 }
 
@@ -28,13 +28,13 @@ class VagaFrontEnd extends Vaga {
 
 // ANÁLISE DE COMPATIBILIDADE //
 
-function calcularCompatibilidade(vagas, candidato) {
+function calcularCompatibilidade(vaga, candidato) {
   
-  let totalRequisitos = vagas.requisitos.length;
+  let totalRequisitos = vaga.requisitos.length;
 
-  let requisitosAtendidos = vagas.requisitos.filter(requisito => candidato.habilidades.includes(requisito));
+  let requisitosAtendidos = vaga.requisitos.filter(requisito => candidato.habilidades.includes(requisito));
 
-  let habilidadesFaltantes = vagas.requisitos.filter(requisito => !candidato.habilidades.includes(requisito));
+  let requisitosFaltantes = vaga.requisitos.filter(requisito => !candidato.habilidades.includes(requisito));
   
   let chanceDeContrato;
 
@@ -50,20 +50,22 @@ function calcularCompatibilidade(vagas, candidato) {
   
 
   return {
-    empresa: vagas.empresa,
-    cargo: vagas.cargo,
-    area: vagas.area,
+    empresa: vaga.empresa,
+    cargo: vaga.cargo,
+    area: vaga.area,
     compatibilidade: compatibilidade.toFixed(0),
     classificação: chanceDeContrato,
     requisitosAtendidos: requisitosAtendidos,
-    habilidadesFaltantes: habilidadesFaltantes
+    requisitosFaltantes: requisitosFaltantes,
+    salario: vaga.salario,
+    modalidade: vaga.modalidade
   };
 };
 
 function resultadoFinal(vagas, candidato) {
-  const resultados = vagas.map(vagas => calcularCompatibilidade(vagas, candidato));
+  const resultados = vagas.map(vaga => calcularCompatibilidade(vaga, candidato));
   return resultados;
-};
+}; 
 
 function vagaCompativel(resultados) {
   const vagaMaisCompativel = resultados.reduce((melhor, atual) => {
@@ -75,9 +77,11 @@ function vagaCompativel(resultados) {
   });
 };
 
-function habilidadesFaltantes(resultados) {
-  let habilidadeQueFalta = resultados.map(vagas => vagas.habilidadesFaltantes)
-  return habilidadeQueFalta.flat()
+
+function pontosEstudar (resultados) {
+  let listaRequisitosFaltantes = resultados.map(vaga => vaga.requisitosFaltantes);
+  return listaRequisitosFaltantes.flat();
 }
 
-export { VagaFrontEnd, calcularCompatibilidade, resultadoFinal, vagaCompativel, habilidadesFaltantes };
+
+export { VagaFrontEnd, calcularCompatibilidade, resultadoFinal, vagaCompativel };

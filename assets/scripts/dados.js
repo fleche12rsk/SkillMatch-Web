@@ -1,4 +1,4 @@
-async function vagas() {
+async function buscarVagas() {
 
     let dadosVagas = [];
 
@@ -20,7 +20,7 @@ async function vagas() {
    return dadosVagas
 }
 
-export { vagas };
+export { buscarVagas };
 
 
 
