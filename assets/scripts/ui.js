@@ -43,12 +43,11 @@ export function renderizarVagas(resultados) {
 
     resultados.forEach(vaga => {
 
-        let resultadoVagaIndex = document.getElementById("vaga-empresas");
+        let resultadoVagaIndex = document.getElementById("vagas");
         let vagaCard = document.createElement("div");
         let tituloVagaCard = document.createElement("h3");
         let cargo = document.createElement("p");
         let area = document.createElement("p");
-        let sobre = document.createElement("p");
         let requisitosAtendidos = document.createElement("ul");
         let requisitosFaltantes = document.createElement("ul");
         vaga.requisitosAtendidos.forEach(requisito => {
@@ -77,9 +76,11 @@ export function renderizarVagas(resultados) {
 
         tituloVagaCard.textContent = vaga.empresa;
         cargo.textContent = vaga.cargo;
-        area.textContent = `Área: ${vaga.area}`
-        salario.textContent = `R$:${vaga.salario}`
-        modalidade.textContent = `TIpo: ${vaga.modalidade}`
+        area.textContent = `Área: ${vaga.area}`;
+        textoRequisitoAtendido.textContent = "Requisitos atendidos:";
+        textoRequisitoFaltante.textContent = "Requisitos faltantes:";
+        salario.textContent = `R$:${vaga.salario}`;
+        modalidade.textContent = `TIpo: ${vaga.modalidade}`;
 
 
         resultadoVagaIndex.appendChild(vagaCard);
@@ -122,4 +123,115 @@ export function menuAreas() {
     }
     
 
+}
+
+
+
+
+
+
+
+
+
+
+
+export function exibirMelhorVaga(melhorVaga) {
+    let divMelhorVaga = document.getElementById("melhor-vaga");
+    divMelhorVaga.innerHTML = "";
+    let tituloMelhorVaga = document.createElement("h3");
+    let cargoMelhor = document.createElement("p");
+    let areaMelhor = document.createElement("p");
+    let requisitosAtendidosMelhor = document.createElement("ul");
+    let requisitosFaltantesMelhor = document.createElement("ul");
+    let textoRequisitoAtendidoMelhor = document.createElement("p");
+    let textoRequisitoFaltanteMelhor = document.createElement("p");
+    melhorVaga.requisitosAtendidos.forEach(requisito => {
+        let valorListaAtendidosMelhor = document.createElement("li");
+            
+        valorListaAtendidosMelhor.textContent = requisito;
+            
+        requisitosAtendidosMelhor.appendChild(valorListaAtendidosMelhor);
+    });
+    melhorVaga.requisitosFaltantes.forEach(requisito => {
+        let valorListaFaltantesMelhor = document.createElement("li");
+
+        valorListaFaltantesMelhor.textContent = requisito;
+        
+        requisitosFaltantesMelhor.appendChild(valorListaFaltantesMelhor);
+    });
+    let salarioMelhor = document.createElement("p");
+    let modalidadeMelhor = document.createElement("p");
+
+
+    tituloMelhorVaga.className = "titulo-melhor-vaga";
+    cargoMelhor.className = "cargo-melhor-vaga";
+    areaMelhor.className = "sobre-melhor-vaga";
+    requisitosAtendidosMelhor.className = "requisitos-atendidos-melhor-vagas";
+    requisitosFaltantesMelhor.className = "requisitos-faltantes-melhor-vagas";
+    salarioMelhor.className = "salario-melhor";
+    modalidadeMelhor.className = "modalidade-melhor";
+
+
+
+    tituloMelhorVaga.textContent = melhorVaga.empresa;
+    cargoMelhor.textContent = melhorVaga.cargo;
+    areaMelhor.textContent = `Área: ${melhorVaga.area}`;
+    textoRequisitoAtendidoMelhor.textContent = "Requisitos atendidos:";
+    textoRequisitoFaltanteMelhor.textContent = "Requisitos faltantes:";
+    salarioMelhor.textContent = `R$:${melhorVaga.salario}`;
+    modalidadeMelhor.textContent = `TIpo: ${melhorVaga.modalidade}`;
+
+
+    divMelhorVaga.appendChild(tituloMelhorVaga);
+    divMelhorVaga.appendChild(cargoMelhor);
+    divMelhorVaga.appendChild(areaMelhor);
+    divMelhorVaga.appendChild(textoRequisitoAtendidoMelhor);
+    divMelhorVaga.appendChild(requisitosAtendidosMelhor);
+    divMelhorVaga.appendChild(textoRequisitoFaltanteMelhor);
+    divMelhorVaga.appendChild(requisitosFaltantesMelhor);
+    divMelhorVaga.appendChild(salarioMelhor);
+    divMelhorVaga.appendChild(modalidadeMelhor);
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export function adicionarMaisContador(contador) {
+    let textoContador = document.getElementById("contador-analise");
+    localStorage.setItem("numeroContador", JSON.stringify(contador));
+
+    
+    textoContador.textContent = `Número de análises realizadas: ${contador} vezes`
+}
+
+export function textoPontosEstudar(candidato, melhorVaga) {
+    let estudarFaltantes = document.getElementById("recomendacao-estudo");
+    let textoEstudo = document.getElementById("texto-estudo")
+    
+
+    textoEstudo.textContent = `Olá ${candidato.nome}, recomendamos a você que estude ${melhorVaga.requisitosFaltantes} para alcançar 100% dos requisitos da vaga mais
+    compatível com o seu perfil. Você pode optar por assistir vídeo no Youtube ou Realizar cursos sobre os conteúdos que você ainda não domina para obter o conhecimento
+    e alcançar suas metas!`;
+
+    estudarFaltantes.appendChild(textoEstudo)
+    
 }

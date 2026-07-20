@@ -1,6 +1,5 @@
 import { buscarVagas, salvarPerfil, carregarPerfil } from "./dados.js";
-import { VagaFrontEnd, calcularCompatibilidade, resultadoFinal, vagaCompativel } from "./motor.js";
-import { lerFormulario, exibirInformacoesCandidato, renderizarVagas, menuHabilidades, menuAreas } from "./ui.js";
+import { VagaFrontEnd, calcularCompatibilidade, resultadoFinal, vagaMaisCompativel, pontosEstudar, criarContador } from "./motor.js";
 // export { candidatoSalvo };
 
 const formulario = document.getElementById("formulario")
@@ -18,6 +17,11 @@ formulario.addEventListener("submit", (dados) => {
     salvarPerfil(candidato);
     let resultados = resultadoFinal(vagas, candidato);
     renderizarVagas(resultados);
+    vagaMaisCompativel(resultados);
+    let melhorVaga = vagaMaisCompativel(resultados);
+    adicionarMaisContador(contador());
+    exibirMelhorVaga(melhorVaga);
+    textoPontosEstudar(candidato, melhorVaga);
 });
 
 botaoHabilidades.addEventListener("click", menuHabilidades);
