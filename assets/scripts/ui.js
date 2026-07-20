@@ -49,7 +49,6 @@ export function renderizarVagas(resultados) {
         let tituloVagaCard = document.createElement("h3");
         let cargo = document.createElement("p");
         let area = document.createElement("p");
-        let sobre = document.createElement("p");
         let requisitosAtendidos = document.createElement("ul");
         let requisitosFaltantes = document.createElement("ul");
         let textoRequisitoAtendido = document.createElement("p");
@@ -204,7 +203,26 @@ export function exibirMelhorVaga(melhorVaga) {
 
     
     
-};
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export function adicionarMaisContador(contador) {
     let textoContador = document.getElementById("contador-analise");
