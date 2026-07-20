@@ -51,19 +51,21 @@ export function renderizarVagas(resultados) {
         let sobre = document.createElement("p");
         let requisitosAtendidos = document.createElement("ul");
         let requisitosFaltantes = document.createElement("ul");
+        let textoRequisitoAtendido = document.createElement("p");
+        let textoRequisitoFaltante = document.createElement("p");
+
         vaga.requisitosAtendidos.forEach(requisito => {
             let valorListaAtendidos = document.createElement("li");
-            let textoRequisitoAtendido = document.createElement("p");
-
+            
             valorListaAtendidos.textContent = requisito;
-            textoRequisitoAtendido.textContent = "Requisitos atendidos:"
-
+            
             requisitosAtendidos.appendChild(valorListaAtendidos);
-            textoRequisitoAtendido.appendChild(valorListaAtendidos);
         });
         vaga.requisitosFaltantes.forEach(requisito => {
             let valorListaFaltantes = document.createElement("li");
+
             valorListaFaltantes.textContent = requisito;
+            
             requisitosFaltantes.appendChild(valorListaFaltantes);
         });
         let salario = document.createElement("p");
@@ -83,6 +85,8 @@ export function renderizarVagas(resultados) {
         tituloVagaCard.textContent = vaga.empresa;
         cargo.textContent = vaga.cargo;
         area.textContent = `Área: ${vaga.area}`
+        textoRequisitoAtendido.textContent = "Requisitos atendidos:"
+        textoRequisitoFaltante.textContent = "Requisitos faltantes:"
         salario.textContent = `R$:${vaga.salario}`
         modalidade.textContent = `TIpo: ${vaga.modalidade}`
 
@@ -91,7 +95,9 @@ export function renderizarVagas(resultados) {
         vagaCard.appendChild(tituloVagaCard);
         vagaCard.appendChild(cargo);
         vagaCard.appendChild(area);
+        vagaCard.appendChild(textoRequisitoAtendido);
         vagaCard.appendChild(requisitosAtendidos);
+        vagaCard.appendChild(textoRequisitoFaltante);
         vagaCard.appendChild(requisitosFaltantes);
         vagaCard.appendChild(salario);
         vagaCard.appendChild(modalidade);
