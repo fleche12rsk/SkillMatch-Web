@@ -175,10 +175,9 @@ a {
     padding: 10px;
 }
 
-#vaga-empresas {
+#vagas {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .vagas-card {
