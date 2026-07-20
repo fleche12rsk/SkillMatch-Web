@@ -143,3 +143,16 @@ export function adicionarMaisContador(contador) {
     
     textoContador.textContent = `Número de análises realizadas: ${contador} vezes`
 }
+
+export function textoPontosEstudar(candidato, melhorVaga) {
+    let estudarFaltantes = document.getElementById("recomendacao-estudo");
+    let textoEstudo = document.getElementById("texto-estudo")
+    
+
+    textoEstudo.textContent = `Olá ${candidato.nome}, recomendamos a você que estude ${melhorVaga.requisitosFaltantes} para alcançar 100% dos requisitos da vaga mais
+    compatível com o seu perfil. Você pode optar por assistir vídeo no Youtube ou Realizar cursos sobre os conteúdos que você ainda não domina para obter o conhecimento
+    e alcançar suas metas!`;
+
+    estudarFaltantes.appendChild(textoEstudo)
+    
+}
