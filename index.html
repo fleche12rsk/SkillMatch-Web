@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/95156858fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" href="assets/img/favcon.ico" type="image/x-icon">
+    
     <script type="module" src="assets/scripts/main.js"></script>
 </head>
 <body>
@@ -18,7 +20,7 @@
             <a href="#inicio" id="nav-tittle"><span id="nav-tittle-s">S</span><span>killMatch</span></a>
             <ul id="nav-list">
                 <li><a href="#formulario_candidato">Formulário</a></li>
-                <li><a href="#resultado_vaga">Vagas</a></li>
+                <li><a href="#vaga-empresas">Vagas</a></li>
             </ul>
         </nav>
 
@@ -26,98 +28,101 @@
 
         <div id="nav-cel-container">
             <nav id="nav-cel">
-                <ul id="nav-list">
+                <ul id="nav-list-cel">
                     <li><a href="#formulario_candidato">Formulário</a></li>
-                    <li><a href="#resultado_vaga">Vagas</a></li>
+                    <li><a href="#vaga-empresas">Vagas</a></li>
                 </ul>
             </nav>
-            <button id="nav-btn" class="btn" hidden><i class="fa-solid fa-bars"></i></button>
+            <button id="nav-btn" class="btn" hidden><i class="fa-solid fa-bars" aria-label="Botão abrir menu"></i></button>
         </div>
     </header>
 
 
     <main id="main">
-        <span>teste</span>
+        <section id="titulo">
+            <h1>SkillMatch Web</h1>
+            <p>O simulador de vaga de emprego mais próximo do real.</p>
+            <img src="assets/img/pessoa-sorrindo-celular.png" alt="Pessoa sorrindo olhando para o celular" id="pessoa-sorrindo">
+        </section>
+
+        <section id="formulario_candidato">
+            <form action="" id="formulario">
+                <h2 id="form-titulo">Formulário do Candidato</h2>
+                <div class="card-section">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>    
+                </div>
+                <br>
+                <div class="card-section">
+                    <button type="button" id="btn-areas">Áreas ▸</button>
+                    <div id="areas-chekbox">
+                        <!--Áreas-->
+                        <label><input  type="checkbox" name="areas" value="front-end"> Front-end</label><br>
+                        <label><input  type="checkbox" name="areas" value="back-end"> Back-end</label><br>
+                        <label><input  type="checkbox" name="areas" value="fullstack"> Fullstack</label><br>
+                        <label><input  type="checkbox" name="areas" value="ui-ux-design"> UI/UX Design</label><br>
+                        <label><input  type="checkbox" name="areas" value="mobile"> Mobile</label><br>
+                        <label><input  type="checkbox" name="areas" value="qa"> QA Testes</label><br>
+                    </div>
+                </div>
+                <br>
+                <div class="card-section">
+                    <button type="button" id="btn-habilidades">Habilidades ▸</button>
+                    <div id="habilidades-chekbox">
+                        <!--Habilidades-->
+                        <label><input  type="checkbox" name="habilidades" value="html"> HTML</label>
+                        <label><input  type="checkbox" name="habilidades" value="css"> CSS</label>
+                        <label><input  type="checkbox" name="habilidades" value="javascript"> JavaScript</label>
+                        <label><input  type="checkbox" name="habilidades" value="git"> Git</label>
+                        <label><input  type="checkbox" name="habilidades" value="flexbox"> FlexBox</label>
+                        <label><input  type="checkbox" name="habilidades" value="responsividade"> Responsividade</label>
+                        <label><input  type="checkbox" name="habilidades" value="bootstrap"> BootStrap</label>
+                        <label><input  type="checkbox" name="habilidades" value="sass"> Sass</label>
+                        <label><input  type="checkbox" name="habilidades" value="dom"> DOM</label>
+                        <label><input  type="checkbox" name="habilidades" value="fetch-api"> Fetch/API</label>
+                        <label><input  type="checkbox" name="habilidades" value="es6"> ES6</label>
+                        <label><input  type="checkbox" name="habilidades" value="async-await"> Async/Await</label>
+                        <label><input  type="checkbox" name="habilidades" value="npm"> npm</label>
+                        <label><input  type="checkbox" name="habilidades" value="figma"> Figma</label>
+                        <label><input  type="checkbox" name="habilidades" value="acessibilidade"> Acessibilidade</label>
+                        <label><input  type="checkbox" name="habilidades" value="seo"> SEO</label>
+                        <label><input  type="checkbox" name="habilidades" value="node"> Node.js</label>
+                        <label><input  type="checkbox" name="habilidades" value="express"> Express</label>
+                        <label><input  type="checkbox" name="habilidades" value="sql"> SQL</label>
+                        <label><input  type="checkbox" name="habilidades" value="mongodb"> MongoDB</label>
+                        <label><input  type="checkbox" name="habilidades" value="api-rest"> API REST</label>
+                        <label><input  type="checkbox" name="habilidades" value="python"> Python</label>
+                        <label><input  type="checkbox" name="habilidades" value="java"> Java</label>
+                        <label><input  type="checkbox" name="habilidades" value="php"> PHP</label>
+                    </div>
+                </div>
+                <br>
+                <div class="card-section">
+                    <label for="experiencia">Meses de experiência:</label>
+                    <input type="number" id="experiencia" required>
+                </div>
+                <button type="submit" id="btn-enviar">Verificar vagas</button>
+            </form>
+        </section>
+
+
+        <section id="vaga-empresas">
+            <p id="contador-analise"></p>
+            <p id="mensagem-status" aria-live="polite"></p>
+            <div id="melhor-vaga">
+    
+            </div>
+            <div id="vagas">
+                    
+            </div>
+        </section>
+
+        <section id="recomendacao-estudo">
+            <p id="texto-estudo">
+
+            </p>
+        </section>
     </main>
-
-
-    <section id="formulario_candidato">
-        <form action="" id="formulario">
-            <h2 id="form-titulo">Formulário do Candidato</h2>
-            <div class="card-section">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" required>    
-            </div>
-            <br>
-            <div class="card-section">
-                <button type="button" id="btn-areas">Áreas ▸</button>
-                <div id="areas-chekbox">
-                    <!--Áreas-->
-                    <label><input  type="checkbox" name="areas" value="front-end"> Front-end</label><br>
-                    <label><input  type="checkbox" name="areas" value="back-end"> Back-end</label><br>
-                    <label><input  type="checkbox" name="areas" value="fullstack"> Fullstack</label><br>
-                    <label><input  type="checkbox" name="areas" value="ui-ux-design"> UI/UX Design</label><br>
-                    <label><input  type="checkbox" name="areas" value="mobile"> Mobile</label><br>
-                    <label><input  type="checkbox" name="areas" value="qa"> QA Testes</label><br>
-                </div>
-            </div>
-            <br>
-            <div class="card-section">
-                <button type="button" id="btn-habilidades">Habilidades ▸</button>
-                <div id="habilidades-chekbox">
-                    <!--Habilidades-->
-                    <label><input  type="checkbox" name="habilidades" value="html"> HTML</label>
-                    <label><input  type="checkbox" name="habilidades" value="css"> CSS</label>
-                    <label><input  type="checkbox" name="habilidades" value="javascript"> JavaScript</label>
-                    <label><input  type="checkbox" name="habilidades" value="git"> Git</label>
-                    <label><input  type="checkbox" name="habilidades" value="flexbox"> FlexBox</label>
-                    <label><input  type="checkbox" name="habilidades" value="responsividade"> Responsividade</label>
-                    <label><input  type="checkbox" name="habilidades" value="bootstrap"> BootStrap</label>
-                    <label><input  type="checkbox" name="habilidades" value="sass"> Sass</label>
-                    <label><input  type="checkbox" name="habilidades" value="dom"> DOM</label>
-                    <label><input  type="checkbox" name="habilidades" value="fetch-api"> Fetch/API</label>
-                    <label><input  type="checkbox" name="habilidades" value="es6"> ES6</label>
-                    <label><input  type="checkbox" name="habilidades" value="async-await"> Async/Await</label>
-                    <label><input  type="checkbox" name="habilidades" value="npm"> npm</label>
-                    <label><input  type="checkbox" name="habilidades" value="figma"> Figma</label>
-                    <label><input  type="checkbox" name="habilidades" value="acessibilidade"> Acessibilidade</label>
-                    <label><input  type="checkbox" name="habilidades" value="seo"> SEO</label>
-                    <label><input  type="checkbox" name="habilidades" value="node"> Node.js</label>
-                    <label><input  type="checkbox" name="habilidades" value="express"> Express</label>
-                    <label><input  type="checkbox" name="habilidades" value="sql"> SQL</label>
-                    <label><input  type="checkbox" name="habilidades" value="mongodb"> MongoDB</label>
-                    <label><input  type="checkbox" name="habilidades" value="api-rest"> API REST</label>
-                    <label><input  type="checkbox" name="habilidades" value="python"> Python</label>
-                    <label><input  type="checkbox" name="habilidades" value="java"> Java</label>
-                    <label><input  type="checkbox" name="habilidades" value="php"> PHP</label>
-                </div>
-            </div>
-            <br>
-            <div class="card-section">
-                <label for="experiencia">Meses de experiência:</label>
-                <input type="number" id="experiencia">
-            </div>
-            <button type="submit" id="btn-enviar">Verificar vagas</button>
-        </form>
-    </section>
-
-
-    <section id="vaga-empresas">
-        <p id="contador-analise"></p>
-        <div id="melhor-vaga">
-
-        </div>
-        <div id="vagas">
-            
-        </div>
-    </section>
-
-    <section id="recomendacao-estudo">
-        <p id="texto-estudo">
-
-        </p>
-    </section>
-
 
     <footer id="footer">
         <div>

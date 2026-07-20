@@ -35,12 +35,13 @@ export function exibirInformacoesCandidato(candidatoSalvo) {
         });
         document.getElementById("experiencia").value = candidatoSalvo.experiencia;
     };
-}
+};
 
 export function renderizarVagas(resultados) {
-    let vagasContainer = document.getElementById("vaga-empresas");
-    let vagaCard = document.createElement("div")
 
+    let vagasContainer = document.getElementById("vagas");
+    vagasContainer.innerHTML = "";
+    
     resultados.forEach(vaga => {
 
         let resultadoVagaIndex = document.getElementById("vagas");
@@ -69,7 +70,7 @@ export function renderizarVagas(resultados) {
         });
         let salario = document.createElement("p");
         let modalidade = document.createElement("p");
-
+        let experienciaMes = document.createElement("p");
 
         vagaCard.className = "vagas-card";
         tituloVagaCard.className = "titulo-vaga-card";
@@ -79,15 +80,17 @@ export function renderizarVagas(resultados) {
         requisitosFaltantes.className = "requisitos-faltantes-vagas";
         salario.className = "salario";
         modalidade.className = "modalidade";
+        experienciaMes.className = "experiencia-mes";
 
 
         tituloVagaCard.textContent = vaga.empresa;
         cargo.textContent = vaga.cargo;
-        area.textContent = `Área: ${vaga.area}`;
-        textoRequisitoAtendido.textContent = "Requisitos atendidos:";
-        textoRequisitoFaltante.textContent = "Requisitos faltantes:";
-        salario.textContent = `R$:${vaga.salario}`;
-        modalidade.textContent = `TIpo: ${vaga.modalidade}`;
+        area.textContent = `Área: ${vaga.area}`
+        textoRequisitoAtendido.textContent = "Requisitos atendidos:"
+        textoRequisitoFaltante.textContent = "Requisitos faltantes:"
+        salario.textContent = `Salário é de R$:${vaga.salario} por mês`
+        modalidade.textContent = `Tipo: ${vaga.modalidade}`
+        experienciaMes.textContent = vaga.textoExperiencia;
 
 
         resultadoVagaIndex.appendChild(vagaCard);
@@ -100,11 +103,12 @@ export function renderizarVagas(resultados) {
         vagaCard.appendChild(requisitosFaltantes);
         vagaCard.appendChild(salario);
         vagaCard.appendChild(modalidade);
+        vagaCard.appendChild(experienciaMes);
 
     })
 
 
-}
+};
 
 export function menuHabilidades() {
     let menuHabilidades = document.getElementById("btn-habilidades");
@@ -132,8 +136,74 @@ export function menuAreas() {
     }
     
 
-}
+};
 
+export function exibirMelhorVaga(melhorVaga) {
+    let divMelhorVaga = document.getElementById("melhor-vaga");
+    divMelhorVaga.innerHTML = "";
+    let tituloMelhorVaga = document.createElement("h3");
+    let cargoMelhor = document.createElement("p");
+    let areaMelhor = document.createElement("p");
+    let requisitosAtendidosMelhor = document.createElement("ul");
+    let requisitosFaltantesMelhor = document.createElement("ul");
+    let textoRequisitoAtendidoMelhor = document.createElement("p");
+    let textoRequisitoFaltanteMelhor = document.createElement("p");
+    melhorVaga.requisitosAtendidos.forEach(requisito => {
+        let valorListaAtendidosMelhor = document.createElement("li");
+            
+        valorListaAtendidosMelhor.textContent = requisito;
+            
+        requisitosAtendidosMelhor.appendChild(valorListaAtendidosMelhor);
+    });
+    melhorVaga.requisitosFaltantes.forEach(requisito => {
+        let valorListaFaltantesMelhor = document.createElement("li");
+
+        valorListaFaltantesMelhor.textContent = requisito;
+        
+        requisitosFaltantesMelhor.appendChild(valorListaFaltantesMelhor);
+    });
+    let salarioMelhor = document.createElement("p");
+    let modalidadeMelhor = document.createElement("p");
+    let experienciaMesMelhor = document.createElement("p");
+
+    
+    divMelhorVaga.style.display = "flex";
+    divMelhorVaga.style.backgroundColor = "var(--cor-card-melhor)";
+    tituloMelhorVaga.className = "titulo-melhor-vaga";
+    cargoMelhor.className = "cargo-melhor-vaga";
+    areaMelhor.className = "sobre-melhor-vaga";
+    requisitosAtendidosMelhor.className = "requisitos-atendidos-melhor-vagas";
+    requisitosFaltantesMelhor.className = "requisitos-faltantes-melhor-vagas";
+    salarioMelhor.className = "salario-melhor";
+    modalidadeMelhor.className = "modalidade-melhor";
+    experienciaMesMelhor.className = "experiencia-mes-melhor";
+
+
+
+    tituloMelhorVaga.textContent = melhorVaga.empresa;
+    cargoMelhor.textContent = melhorVaga.cargo;
+    areaMelhor.textContent = `Área: ${melhorVaga.area}`;
+    textoRequisitoAtendidoMelhor.textContent = "Requisitos atendidos:";
+    textoRequisitoFaltanteMelhor.textContent = "Requisitos faltantes:";
+    salarioMelhor.textContent = `Salário é de R$:${melhorVaga.salario} por mês`;
+    modalidadeMelhor.textContent = `Tipo: ${melhorVaga.modalidade}`;
+    experienciaMesMelhor.textContent = melhorVaga.textoExperiencia;
+
+
+    divMelhorVaga.appendChild(tituloMelhorVaga);
+    divMelhorVaga.appendChild(cargoMelhor);
+    divMelhorVaga.appendChild(areaMelhor);
+    divMelhorVaga.appendChild(textoRequisitoAtendidoMelhor);
+    divMelhorVaga.appendChild(requisitosAtendidosMelhor);
+    divMelhorVaga.appendChild(textoRequisitoFaltanteMelhor);
+    divMelhorVaga.appendChild(requisitosFaltantesMelhor);
+    divMelhorVaga.appendChild(salarioMelhor);
+    divMelhorVaga.appendChild(modalidadeMelhor);
+    divMelhorVaga.appendChild(experienciaMesMelhor);
+
+    
+    
+};
 
 
 
@@ -230,7 +300,7 @@ export function adicionarMaisContador(contador) {
 
     
     textoContador.textContent = `Número de análises realizadas: ${contador} vezes`
-}
+};
 
 export function textoPontosEstudar(candidato, melhorVaga) {
     let estudarFaltantes = document.getElementById("recomendacao-estudo");
@@ -243,4 +313,12 @@ export function textoPontosEstudar(candidato, melhorVaga) {
 
     estudarFaltantes.appendChild(textoEstudo)
     
+};
+
+export function mostrarStatus(mensagem) {
+    let mensagemStatus = document.getElementById("mensagem-status");
+
+    mensagemStatus.textContent = mensagem;
+
+    console.log("Status do fetch: " + mensagem); // Visualize no console do navegador
 }
