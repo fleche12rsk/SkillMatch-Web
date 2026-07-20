@@ -39,6 +39,9 @@ export function exibirInformacoesCandidato(candidatoSalvo) {
 
 export function renderizarVagas(resultados) {
 
+    let vagasContainer = document.getElementById("vagas");
+    vagasContainer.innerHTML = "";
+    
     resultados.forEach(vaga => {
 
         let resultadoVagaIndex = document.getElementById("vagas");
@@ -68,7 +71,7 @@ export function renderizarVagas(resultados) {
         });
         let salario = document.createElement("p");
         let modalidade = document.createElement("p");
-
+        let experienciaMes = document.createElement("p");
 
         vagaCard.className = "vagas-card";
         tituloVagaCard.className = "titulo-vaga-card";
@@ -78,6 +81,7 @@ export function renderizarVagas(resultados) {
         requisitosFaltantes.className = "requisitos-faltantes-vagas";
         salario.className = "salario";
         modalidade.className = "modalidade";
+        experienciaMes.className = "experiencia-mes";
 
 
         tituloVagaCard.textContent = vaga.empresa;
@@ -85,8 +89,9 @@ export function renderizarVagas(resultados) {
         area.textContent = `Área: ${vaga.area}`
         textoRequisitoAtendido.textContent = "Requisitos atendidos:"
         textoRequisitoFaltante.textContent = "Requisitos faltantes:"
-        salario.textContent = `R$:${vaga.salario}`
-        modalidade.textContent = `TIpo: ${vaga.modalidade}`
+        salario.textContent = `Salário é de R$:${vaga.salario} por mês`
+        modalidade.textContent = `Tipo: ${vaga.modalidade}`
+        experienciaMes.textContent = vaga.textoExperiencia;
 
 
         resultadoVagaIndex.appendChild(vagaCard);
@@ -99,6 +104,7 @@ export function renderizarVagas(resultados) {
         vagaCard.appendChild(requisitosFaltantes);
         vagaCard.appendChild(salario);
         vagaCard.appendChild(modalidade);
+        vagaCard.appendChild(experienciaMes);
 
     })
 
@@ -159,8 +165,11 @@ export function exibirMelhorVaga(melhorVaga) {
     });
     let salarioMelhor = document.createElement("p");
     let modalidadeMelhor = document.createElement("p");
+    let experienciaMesMelhor = document.createElement("p");
 
-
+    
+    divMelhorVaga.style.display = "flex";
+    divMelhorVaga.style.backgroundColor = "var(--cor-card-melhor)";
     tituloMelhorVaga.className = "titulo-melhor-vaga";
     cargoMelhor.className = "cargo-melhor-vaga";
     areaMelhor.className = "sobre-melhor-vaga";
@@ -168,6 +177,7 @@ export function exibirMelhorVaga(melhorVaga) {
     requisitosFaltantesMelhor.className = "requisitos-faltantes-melhor-vagas";
     salarioMelhor.className = "salario-melhor";
     modalidadeMelhor.className = "modalidade-melhor";
+    experienciaMesMelhor.className = "experiencia-mes-melhor";
 
 
 
@@ -176,8 +186,9 @@ export function exibirMelhorVaga(melhorVaga) {
     areaMelhor.textContent = `Área: ${melhorVaga.area}`;
     textoRequisitoAtendidoMelhor.textContent = "Requisitos atendidos:";
     textoRequisitoFaltanteMelhor.textContent = "Requisitos faltantes:";
-    salarioMelhor.textContent = `R$:${melhorVaga.salario}`;
-    modalidadeMelhor.textContent = `TIpo: ${melhorVaga.modalidade}`;
+    salarioMelhor.textContent = `Salário é de R$:${melhorVaga.salario} por mês`;
+    modalidadeMelhor.textContent = `Tipo: ${melhorVaga.modalidade}`;
+    experienciaMesMelhor.textContent = melhorVaga.textoExperiencia;
 
 
     divMelhorVaga.appendChild(tituloMelhorVaga);
@@ -189,6 +200,7 @@ export function exibirMelhorVaga(melhorVaga) {
     divMelhorVaga.appendChild(requisitosFaltantesMelhor);
     divMelhorVaga.appendChild(salarioMelhor);
     divMelhorVaga.appendChild(modalidadeMelhor);
+    divMelhorVaga.appendChild(experienciaMesMelhor);
 
     
     
@@ -214,3 +226,11 @@ export function textoPontosEstudar(candidato, melhorVaga) {
     estudarFaltantes.appendChild(textoEstudo)
     
 };
+
+export function mostrarStatus(mensagem) {
+    let mensagemStatus = document.getElementById("mensagem-status");
+
+    mensagemStatus.textContent = mensagem;
+
+    console.log("Status do fetch: " + mensagem); // Visualize no console do navegador
+}

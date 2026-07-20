@@ -14,13 +14,13 @@ class Vaga {
 };
 
 class VagaFrontEnd extends Vaga {
-  constructor(empresa, cargo, requisito, salario, modalidade, experienciaMes) {
-    super(empresa, cargo, requisito, salario, modalidade);
+  constructor(empresa, cargo, area, requisito, salario, modalidade, experienciaMes) {
+    super(empresa, cargo, area, requisito, salario, modalidade);
     this.nivelExperiencia = experienciaMes;
   }
 
-  exibirTrabalho() {
-    return `É necessário que tenha ${this.experienciaMes} meses de experiência para conseguir atender os requisitos da vagas de ${this.empresa}`;
+  exibirMesExperiencia() {
+    return `É necessário que tenha ${this.nivelExperiencia} meses de experiência`;
   }
 }
 
@@ -58,7 +58,9 @@ function calcularCompatibilidade(vaga, candidato) {
     requisitosAtendidos: requisitosAtendidos,
     requisitosFaltantes: requisitosFaltantes,
     salario: vaga.salario,
-    modalidade: vaga.modalidade
+    modalidade: vaga.modalidade,
+    textoExperiencia: vaga.exibirMesExperiencia(),
+    numeroMesesExigidos: Number(vaga.nivelExperiencia)
   };
 };
 
@@ -72,6 +74,12 @@ function vagaMaisCompativel(resultados) {
   const vagaMaisCompativel = resultados.reduce((melhor, atual) => {
     if (Number(atual.compatibilidade) > Number(melhor.compatibilidade)) {
       return atual
+    } else if (Number(atual.compatibilidade) === Number(melhor.compatibilidade)) {
+      if (atual.numeroMesesExigidos < melhor.numeroMesesExigidos) {
+        return atual;
+      } else {
+        return melhor;
+      }
     } else {
       return melhor
     }

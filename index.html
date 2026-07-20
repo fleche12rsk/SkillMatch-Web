@@ -33,7 +33,7 @@
                     <li><a href="#vaga-empresas">Vagas</a></li>
                 </ul>
             </nav>
-            <button id="nav-btn" class="btn" hidden><i class="fa-solid fa-bars"></i></button>
+            <button id="nav-btn" class="btn" hidden><i class="fa-solid fa-bars" aria-label="Botão abrir menu"></i></button>
         </div>
     </header>
 
@@ -42,6 +42,7 @@
         <section id="titulo">
             <h1>SkillMatch Web</h1>
             <p>O simulador de vaga de emprego mais próximo do real.</p>
+            <img src="assets/img/pessoa-sorrindo-celular.png" alt="Pessoa sorrindo olhando para o celular" id="pessoa-sorrindo">
         </section>
 
         <section id="formulario_candidato">
@@ -98,7 +99,7 @@
                 <br>
                 <div class="card-section">
                     <label for="experiencia">Meses de experiência:</label>
-                    <input type="number" id="experiencia">
+                    <input type="number" id="experiencia" required>
                 </div>
                 <button type="submit" id="btn-enviar">Verificar vagas</button>
             </form>
@@ -107,11 +108,12 @@
 
         <section id="vaga-empresas">
             <p id="contador-analise"></p>
+            <p id="mensagem-status" aria-live="polite"></p>
             <div id="melhor-vaga">
-
+    
             </div>
             <div id="vagas">
-                
+                    
             </div>
         </section>
 
