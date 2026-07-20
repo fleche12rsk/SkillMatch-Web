@@ -1,18 +1,18 @@
 :root {
-    /* base */
-    --cor-primaria: #581480;        /* azul principal (botões, links) */
-    --cor-primaria-escura: #422353; /* hover do botão */
-    --cor-fundo: #fffaec;           /* fundo da página */
+    --cor-primaria: #581480;
+    --cor-primaria-escura: #422353;
+    --cor-primaria-suave: #9177a0;
+    --cor-fundo: #fffaec;
     --cor-fundo-navbar: #f1ede0;
-    --cor-card: #b6b1b2be;            /* fundo dos cards */
-    --cor-borda: #e2e8f0;           /* bordas suaves */
-    --cor-botao: #a8a8a8;           /* botão */
+    --cor-card: #b6b1b2be;
+    --cor-borda: #e2e8f0;
+    --cor-botao: #a8a8a8;
     --cor-card-melhor: #ffd561;
     --cor-footer: #474747;
 
-    /* texto */
-    --cor-texto: #494949 ;           /* texto principal */
-    --cor-texto-suave: #b1afaf;     /* texto secundário (área, modalidade) */
+
+    --cor-texto: #494949 ;
+    --cor-texto-suave: #b1afaf;
 }
 
 body {
@@ -53,6 +53,15 @@ h1 {
 
 }
 
+#pessoa-sorrindo {
+    position: fixed;
+    right: 0;
+    height: 600px;
+    width: auto;
+    background-color: var(--cor-primaria-suave);
+    border-radius: 10px 0px 0px 10px;
+}
+
 #nav-list {
     display: flex;
     align-items: center;
@@ -73,6 +82,12 @@ h1 {
 #nav-tittle {
     font-size: 24px;
     font-weight: bold;
+}
+
+@media (max-width: 1580px) {
+    #pessoa-sorrindo {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -192,13 +207,12 @@ h1 {
     padding: 10px;
 }
 
-#vaga-empresas {
 
-}
 
 #vagas {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .vagas-card {
@@ -209,15 +223,29 @@ h1 {
 }
 
 #melhor-vaga {
+    display: none;
     background-color: var(--cor-card-melhor);
-    display: flex;
+    border-radius: 8px;
+    max-width: 300px;
+    max-height: auto;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    padding: 20px;
+    margin: 20px auto;
 }
 
 #recomendacao-estudo {
     height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#recomendacao-estudo p {
+    width: 50rem;
+    background-color: var(--cor-card-melhor);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 #footer {
