@@ -3,9 +3,12 @@
     --cor-primaria: #581480;        /* azul principal (botões, links) */
     --cor-primaria-escura: #422353; /* hover do botão */
     --cor-fundo: #fffaec;           /* fundo da página */
+    --cor-fundo-navbar: #f1ede0;
     --cor-card: #b6b1b2be;            /* fundo dos cards */
     --cor-borda: #e2e8f0;           /* bordas suaves */
     --cor-botao: #a8a8a8;           /* botão */
+    --cor-card-melhor: #ffd561;
+    --cor-footer: #474747;
 
     /* texto */
     --cor-texto: #494949 ;           /* texto principal */
@@ -24,12 +27,22 @@ a {
     color: var(--cor-texto);
 }
 
+h1 {
+    font-size: 50px;
+    margin-bottom: -5px;
+}
+
 #nav-tittle-s {
     color: var(--cor-primaria);
 }
 
 #navbar {
     height: 70px;
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-fundo-navbar);
+    z-index: 100;
+    padding-top: 10px;
 }
 
 #nav-pc {
@@ -37,7 +50,7 @@ a {
     align-items: center;
     justify-content: center;
     position: relative;
-    
+
 }
 
 #nav-list {
@@ -45,18 +58,13 @@ a {
     align-items: center;
     gap: 20px;
     list-style: none;
+    padding: 0;
 }
 
 #nav-tittle {
     left: 30px;
     position: absolute;
 }
-
-
-#main {
-    height: 100vh;
-}
-
 
 #nav-cel {
     display: none;
@@ -89,17 +97,26 @@ a {
     }
 }
 
+#titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-100px);
+    height: 100vh;
+}
+
 #formulario_candidato {
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #formulario {
     background-color: var(--cor-card);
     padding: 5px 20px 20px 20px;
     border-radius: 15px;
-    margin: 40px;
     height: fit-content;
 }
 
@@ -176,9 +193,12 @@ a {
 }
 
 #vaga-empresas {
+
+}
+
+#vagas {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .vagas-card {
@@ -188,6 +208,14 @@ a {
     margin: 20px;
 }
 
+#melhor-vaga {
+    background-color: var(--cor-card-melhor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
 #recomendacao-estudo {
     height: 50vh;
 }
@@ -195,7 +223,7 @@ a {
 #footer {
     display: flex;
     justify-content: center;
-    background-color: #474747;
+    background-color: var(--cor-footer);
     color: rgb(15, 15, 15);
     height: 9vh;
     align-items: center;
