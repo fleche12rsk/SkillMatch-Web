@@ -67,14 +67,17 @@ function resultadoFinal(vagas, candidato) {
   return resultados;
 }; 
 
-function vagaCompativel(resultados) {
+// Bug para avisar no video
+function vagaMaisCompativel(resultados) {
   const vagaMaisCompativel = resultados.reduce((melhor, atual) => {
-    if (atual.compatibilidade > melhor.compatibilidade) {
+    if (Number(atual.compatibilidade) > Number(melhor.compatibilidade)) {
       return atual
     } else {
       return melhor
     }
   });
+  
+  return vagaMaisCompativel
 };
 
 
@@ -84,4 +87,19 @@ function pontosEstudar (resultados) {
 }
 
 
-export { VagaFrontEnd, calcularCompatibilidade, resultadoFinal, vagaCompativel };
+function criarContador() {
+  let contador = 0;
+
+  return function adicionarValorContador() {
+    contador++;
+    return contador;
+  }
+}
+
+
+
+
+
+
+
+export { VagaFrontEnd, calcularCompatibilidade, resultadoFinal, vagaMaisCompativel, pontosEstudar, criarContador };

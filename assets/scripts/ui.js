@@ -53,8 +53,13 @@ export function renderizarVagas(resultados) {
         let requisitosFaltantes = document.createElement("ul");
         vaga.requisitosAtendidos.forEach(requisito => {
             let valorListaAtendidos = document.createElement("li");
+            let textoRequisitoAtendido = document.createElement("p");
+
             valorListaAtendidos.textContent = requisito;
+            textoRequisitoAtendido.textContent = "Requisitos atendidos:"
+
             requisitosAtendidos.appendChild(valorListaAtendidos);
+            textoRequisitoAtendido.appendChild(valorListaAtendidos);
         });
         vaga.requisitosFaltantes.forEach(requisito => {
             let valorListaFaltantes = document.createElement("li");
@@ -122,4 +127,13 @@ export function menuAreas() {
     }
     
 
+}
+
+
+export function adicionarMaisContador(contador) {
+    let textoContador = document.getElementById("contador-analise");
+    localStorage.setItem("numeroContador", JSON.stringify(contador));
+
+    
+    textoContador.textContent = `Número de análises realizadas: ${contador} vezes`
 }

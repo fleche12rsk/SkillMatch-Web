@@ -12,7 +12,6 @@ async function buscarVagas() {
 
 
     dadosVagas = await response.json();
-    console.log(dadosVagas)
    } catch (error) {
         console.error("Falha ao carregar local JSON:", error);
    }
