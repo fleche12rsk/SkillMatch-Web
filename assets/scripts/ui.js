@@ -38,12 +38,10 @@ export function exibirInformacoesCandidato(candidatoSalvo) {
 };
 
 export function renderizarVagas(resultados) {
-    let vagasContainer = document.getElementById("vaga-empresas");
-    let vagaCard = document.createElement("div")
 
     resultados.forEach(vaga => {
 
-        let resultadoVagaIndex = document.getElementById("vaga-empresas");
+        let resultadoVagaIndex = document.getElementById("vagas");
         let vagaCard = document.createElement("div");
         let tituloVagaCard = document.createElement("h3");
         let cargo = document.createElement("p");
@@ -133,11 +131,6 @@ export function menuAreas() {
     }
     
 
-<<<<<<< Updated upstream
-}
-
-
-=======
 };
 
 export function exibirMelhorVaga(melhorVaga) {
@@ -201,7 +194,6 @@ export function exibirMelhorVaga(melhorVaga) {
     
 };
 
->>>>>>> Stashed changes
 export function adicionarMaisContador(contador) {
     let textoContador = document.getElementById("contador-analise");
     localStorage.setItem("numeroContador", JSON.stringify(contador));
