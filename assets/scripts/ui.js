@@ -35,7 +35,7 @@ export function exibirInformacoesCandidato(candidatoSalvo) {
         });
         document.getElementById("experiencia").value = candidatoSalvo.experiencia;
     };
-}
+};
 
 export function renderizarVagas(resultados) {
     let vagasContainer = document.getElementById("vaga-empresas");
@@ -105,7 +105,7 @@ export function renderizarVagas(resultados) {
     })
 
 
-}
+};
 
 export function menuHabilidades() {
     let menuHabilidades = document.getElementById("btn-habilidades");
@@ -133,16 +133,82 @@ export function menuAreas() {
     }
     
 
+<<<<<<< Updated upstream
 }
 
 
+=======
+};
+
+export function exibirMelhorVaga(melhorVaga) {
+    let divMelhorVaga = document.getElementById("melhor-vaga");
+    divMelhorVaga.innerHTML = "";
+    let tituloMelhorVaga = document.createElement("h3");
+    let cargoMelhor = document.createElement("p");
+    let areaMelhor = document.createElement("p");
+    let requisitosAtendidosMelhor = document.createElement("ul");
+    let requisitosFaltantesMelhor = document.createElement("ul");
+    let textoRequisitoAtendidoMelhor = document.createElement("p");
+    let textoRequisitoFaltanteMelhor = document.createElement("p");
+    melhorVaga.requisitosAtendidos.forEach(requisito => {
+        let valorListaAtendidosMelhor = document.createElement("li");
+            
+        valorListaAtendidosMelhor.textContent = requisito;
+            
+        requisitosAtendidosMelhor.appendChild(valorListaAtendidosMelhor);
+    });
+    melhorVaga.requisitosFaltantes.forEach(requisito => {
+        let valorListaFaltantesMelhor = document.createElement("li");
+
+        valorListaFaltantesMelhor.textContent = requisito;
+        
+        requisitosFaltantesMelhor.appendChild(valorListaFaltantesMelhor);
+    });
+    let salarioMelhor = document.createElement("p");
+    let modalidadeMelhor = document.createElement("p");
+
+
+    tituloMelhorVaga.className = "titulo-melhor-vaga";
+    cargoMelhor.className = "cargo-melhor-vaga";
+    areaMelhor.className = "sobre-melhor-vaga";
+    requisitosAtendidosMelhor.className = "requisitos-atendidos-melhor-vagas";
+    requisitosFaltantesMelhor.className = "requisitos-faltantes-melhor-vagas";
+    salarioMelhor.className = "salario-melhor";
+    modalidadeMelhor.className = "modalidade-melhor";
+
+
+
+    tituloMelhorVaga.textContent = melhorVaga.empresa;
+    cargoMelhor.textContent = melhorVaga.cargo;
+    areaMelhor.textContent = `Área: ${melhorVaga.area}`;
+    textoRequisitoAtendidoMelhor.textContent = "Requisitos atendidos:";
+    textoRequisitoFaltanteMelhor.textContent = "Requisitos faltantes:";
+    salarioMelhor.textContent = `R$:${melhorVaga.salario}`;
+    modalidadeMelhor.textContent = `TIpo: ${melhorVaga.modalidade}`;
+
+
+    divMelhorVaga.appendChild(tituloMelhorVaga);
+    divMelhorVaga.appendChild(cargoMelhor);
+    divMelhorVaga.appendChild(areaMelhor);
+    divMelhorVaga.appendChild(textoRequisitoAtendidoMelhor);
+    divMelhorVaga.appendChild(requisitosAtendidosMelhor);
+    divMelhorVaga.appendChild(textoRequisitoFaltanteMelhor);
+    divMelhorVaga.appendChild(requisitosFaltantesMelhor);
+    divMelhorVaga.appendChild(salarioMelhor);
+    divMelhorVaga.appendChild(modalidadeMelhor);
+
+    
+    
+};
+
+>>>>>>> Stashed changes
 export function adicionarMaisContador(contador) {
     let textoContador = document.getElementById("contador-analise");
     localStorage.setItem("numeroContador", JSON.stringify(contador));
 
     
     textoContador.textContent = `Número de análises realizadas: ${contador} vezes`
-}
+};
 
 export function textoPontosEstudar(candidato, melhorVaga) {
     let estudarFaltantes = document.getElementById("recomendacao-estudo");
@@ -155,4 +221,4 @@ export function textoPontosEstudar(candidato, melhorVaga) {
 
     estudarFaltantes.appendChild(textoEstudo)
     
-}
+};
