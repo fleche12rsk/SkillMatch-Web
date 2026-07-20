@@ -1,0 +1,206 @@
+:root {
+    /* base */
+    --cor-primaria: #581480;        /* azul principal (botões, links) */
+    --cor-primaria-escura: #422353; /* hover do botão */
+    --cor-fundo: #fffaec;           /* fundo da página */
+    --cor-card: #b6b1b2be;            /* fundo dos cards */
+    --cor-borda: #e2e8f0;           /* bordas suaves */
+    --cor-botao: #a8a8a8;           /* botão */
+
+    /* texto */
+    --cor-texto: #494949 ;           /* texto principal */
+    --cor-texto-suave: #b1afaf;     /* texto secundário (área, modalidade) */
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+#nav-tittle-s {
+    color: var(--cor-primaria);
+}
+
+#navbar {
+    height: 70px;
+}
+
+#nav-pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+#nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+#nav-tittle {
+    left: 30px;
+    position: absolute;
+}
+
+
+#main {
+    height: 100vh;
+}
+
+
+#nav-cel {
+    display: none;
+}
+
+#nav-tittle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #nav-pc {
+        display: none;
+    }
+    
+    #nav-cel-container {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        margin-right: 30px;
+    }
+
+    #nav-btn {
+        display: flex;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0;
+        font-size: 24px;
+    }
+}
+
+#formulario_candidato {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#formulario {
+    background-color: var(--cor-card);
+    padding: 5px 20px 20px 20px;
+    border-radius: 15px;
+    margin: 40px;
+    height: fit-content;
+}
+
+#form-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bolder;
+}
+
+#btn-areas {
+    cursor: pointer;
+    border: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-botao);
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#btn-habilidades {
+    cursor: pointer;
+    border: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-botao);
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.card-section {
+    margin-bottom: 10px;
+}
+
+.card-section input {
+    border: none; 
+    background-color: var(--cor-botao);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#habilidades-chekbox {
+    display: none;
+} 
+
+#areas-chekbox {
+    display: none;
+}
+
+#habilidades-chekbox.menu-aberto {
+    display: flex;
+    flex-direction: column;
+}
+
+#areas-chekbox.menu-aberto {
+    display: block;
+}
+
+
+
+
+#btn-enviar {
+    cursor: pointer;
+    border: none;
+    color: var(--cor-texto);
+    background-color: var(--cor-botao);
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#vaga-empresas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.vagas-card {
+    background-color: var(--cor-card);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#recomendacao-estudo {
+    height: 50vh;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color: #474747;
+    color: rgb(15, 15, 15);
+    height: 9vh;
+    align-items: center;
+}
+
+#footer a {
+    color: rgb(15, 15, 15);
+}
