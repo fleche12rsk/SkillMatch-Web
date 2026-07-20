@@ -7,6 +7,7 @@ const formulario = document.getElementById("formulario")
 const vagas = await buscarVagas();
 let botaoHabilidades = document.getElementById("btn-habilidades");
 let botaoArea = document.getElementById("btn-areas")
+let contador = criarContador();
 
 const candidatoSalvo = carregarPerfil();
 exibirInformacoesCandidato(candidatoSalvo);

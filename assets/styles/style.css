@@ -187,6 +187,10 @@ a {
     margin: 20px;
 }
 
+#recomendacao-estudo {
+    height: 50vh;
+}
+
 #footer {
     display: flex;
     justify-content: center;
