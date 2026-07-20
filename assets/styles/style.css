@@ -29,29 +29,29 @@ a {
 }
 
 #navbar {
-    display: flex;
     height: 70px;
-    align-items: center;
 }
 
 #nav-pc {
-    display: flex; 
-    flex: 1;
-}
-
-#nav-tittle {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-left: 30px;
+    position: relative;
+    
 }
 
 #nav-list {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 20px;
     list-style: none;
-    flex: 1;
 }
+
+#nav-tittle {
+    left: 30px;
+    position: absolute;
+}
+
 
 #main {
     height: 100vh;
@@ -148,15 +148,16 @@ a {
     display: none;
 } 
 
-#area-chekbox {
+#areas-chekbox {
     display: none;
 }
 
 #habilidades-chekbox.menu-aberto {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
-#area-chekbox.menu-aberto {
+#areas-chekbox.menu-aberto {
     display: block;
 }
 

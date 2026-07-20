@@ -53,13 +53,13 @@ export function renderizarVagas(resultados) {
         let requisitosFaltantes = document.createElement("ul");
         vaga.requisitosAtendidos.forEach(requisito => {
             let valorListaAtendidos = document.createElement("li");
-            valorLista.textContent = requisito;
-            requisitosAtendidos.appendChild(valorLista);
+            valorListaAtendidos.textContent = requisito;
+            requisitosAtendidos.appendChild(valorListaAtendidos);
         });
         vaga.requisitosFaltantes.forEach(requisito => {
             let valorListaFaltantes = document.createElement("li");
-            valorLista.textContent = requisito;
-            requisitosFaltantes.appendChild(valorLista);
+            valorListaFaltantes.textContent = requisito;
+            requisitosFaltantes.appendChild(valorListaFaltantes);
         });
         let salario = document.createElement("p");
         let modalidade = document.createElement("p");
@@ -70,20 +70,16 @@ export function renderizarVagas(resultados) {
         cargo.className = "cargo-vaga-card";
         area.className = "sobre-vaga-card";
         requisitosAtendidos.className = "requisitos-atendidos-vagas";
-        requisitosFaltantes.className = "requisitos-faltantes-vagas"
-        requisitosAtendidosLista.className = "requisitos-atendidos-lista"
-        requisitosFaltantesLista.className = "requisitos-faltantes-lista"
-        salario.className = "salario"
-        modalidade.className = "modalidade"
+        requisitosFaltantes.className = "requisitos-faltantes-vagas";
+        salario.className = "salario";
+        modalidade.className = "modalidade";
 
 
-        tituloVagaCard.textContent = vaga.empresa
-        cargo.textContent = vaga.cargo
-        area.textContent = vaga.area
-        requisitosAtendidosLista.textContent = vaga.requisitosAtendidos
-        requisitosFaltantesLista.textContent = vaga.requisitosFaltantes
-        salario.textContent = vaga.salario
-        modalidade.textContent = vaga.modalidade
+        tituloVagaCard.textContent = vaga.empresa;
+        cargo.textContent = vaga.cargo;
+        area.textContent = `Área: ${vaga.area}`
+        salario.textContent = `R$:${vaga.salario}`
+        modalidade.textContent = `TIpo: ${vaga.modalidade}`
 
 
         resultadoVagaIndex.appendChild(vagaCard);
@@ -92,8 +88,6 @@ export function renderizarVagas(resultados) {
         vagaCard.appendChild(area);
         vagaCard.appendChild(requisitosAtendidos);
         vagaCard.appendChild(requisitosFaltantes);
-        requisitosAtendidos.appendChild(requisitosAtendidosLista);
-        requisitosFaltantes.appendChild(requisitosFaltantesLista);
         vagaCard.appendChild(salario);
         vagaCard.appendChild(modalidade);
 
@@ -102,12 +96,30 @@ export function renderizarVagas(resultados) {
 
 }
 
-
 export function menuHabilidades() {
     let menuHabilidades = document.getElementById("btn-habilidades");
     let habilidadesChekbox = document.getElementById("habilidades-chekbox");
+    let aberto = habilidadesChekbox.classList.toggle("menu-aberto");
+    
+    if (aberto) {
+        menuHabilidades.textContent = "Habilidades ▾";
+    } else {
+        menuHabilidades.textContent = "Habilidades ▸";
+    }
+    
 
-    menuHabilidades.textContent = "Habilidadeewes ▾";
-    habilidadesChekbox.classList.toggle = "menu-aberto";
+}
+
+export function menuAreas() {
+    let menuAreas = document.getElementById("btn-areas");
+    let areasChekbox = document.getElementById("areas-chekbox");
+    let aberto = areasChekbox.classList.toggle("menu-aberto");
+    
+    if (aberto) {
+        menuAreas.textContent = "Área ▾";
+    } else {
+        menuAreas.textContent = "Área ▸";
+    }
+    
 
 }
