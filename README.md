@@ -3,7 +3,7 @@
 Simulador de compatibilidade entre o perfil de um candidato e vagas de programação.
 
 🔗 **Acesse:** [SkillMatch Web](https://fleche12rsk.github.io/SkillMatch-Web/)
-🎬 **Vídeo de apresentação:** [Link do vídeo]()
+🎬 **Vídeo de apresentação:** [Link do vídeo](https://drive.google.com/file/d/1zWvJtCW5tmocEcQGn-x9qi7I3uJajOvO/view?usp=sharing)
 📋 **Quadro Kanban:** [Link do quadro](https://github.com/users/fleche12rsk/projects/1)
 
 ## Sobre o projeto:
