@@ -149,6 +149,7 @@ export function exibirMelhorVaga(melhorVaga) {
     let requisitosFaltantesMelhor = document.createElement("ul");
     let textoRequisitoAtendidoMelhor = document.createElement("p");
     let textoRequisitoFaltanteMelhor = document.createElement("p");
+    let experienciaMesMelhor = document.createElement("p");
     melhorVaga.requisitosAtendidos.forEach(requisito => {
         let valorListaAtendidosMelhor = document.createElement("li");
             
@@ -167,6 +168,7 @@ export function exibirMelhorVaga(melhorVaga) {
     let modalidadeMelhor = document.createElement("p");
 
     divMelhorVaga.style.display = "flex";
+    divMelhorVaga.style.backgroundColor = "var(--cor-card-melhor)";
     tituloMelhorVaga.className = "titulo-melhor-vaga";
     cargoMelhor.className = "cargo-melhor-vaga";
     areaMelhor.className = "sobre-melhor-vaga";
@@ -174,6 +176,7 @@ export function exibirMelhorVaga(melhorVaga) {
     requisitosFaltantesMelhor.className = "requisitos-faltantes-melhor-vagas";
     salarioMelhor.className = "salario-melhor";
     modalidadeMelhor.className = "modalidade-melhor";
+    experienciaMesMelhor.className = "experiencia-mes-melhor";
 
 
 
@@ -182,8 +185,9 @@ export function exibirMelhorVaga(melhorVaga) {
     areaMelhor.textContent = `Área: ${melhorVaga.area}`;
     textoRequisitoAtendidoMelhor.textContent = "Requisitos atendidos:";
     textoRequisitoFaltanteMelhor.textContent = "Requisitos faltantes:";
-    salarioMelhor.textContent = `R$:${melhorVaga.salario}`;
-    modalidadeMelhor.textContent = `TIpo: ${melhorVaga.modalidade}`;
+    salarioMelhor.textContent = `Salário é de R$:${melhorVaga.salario} por mês`;
+    modalidadeMelhor.textContent = `Tipo: ${melhorVaga.modalidade}`;
+    experienciaMesMelhor.textContent = melhorVaga.textoExperiencia;
 
 
     divMelhorVaga.appendChild(tituloMelhorVaga);
@@ -195,6 +199,7 @@ export function exibirMelhorVaga(melhorVaga) {
     divMelhorVaga.appendChild(requisitosFaltantesMelhor);
     divMelhorVaga.appendChild(salarioMelhor);
     divMelhorVaga.appendChild(modalidadeMelhor);
+    divMelhorVaga.appendChild(experienciaMesMelhor);
 
     
     
