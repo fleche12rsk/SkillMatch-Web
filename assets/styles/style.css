@@ -75,10 +75,6 @@ h1 {
     position: absolute;
 }
 
-#nav-cel {
-    display: none;
-}
-
 #nav-tittle {
     font-size: 24px;
     font-weight: bold;
@@ -93,22 +89,6 @@ h1 {
 @media (max-width: 768px) {
     #nav-pc {
         display: none;
-    }
-    
-    #nav-cel-container {
-        display: flex;
-        flex: 1;
-        justify-content: flex-end;
-        margin-right: 30px;
-    }
-
-    #nav-btn {
-        display: flex;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        padding: 0;
-        font-size: 24px;
     }
 }
 
@@ -246,6 +226,7 @@ h1 {
     background-color: var(--cor-card-melhor);
     padding: 20px;
     border-radius: 10px;
+    display: none;
 }
 
 #footer {

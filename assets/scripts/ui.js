@@ -138,6 +138,7 @@ export function menuAreas() {
 
 };
 
+
 export function exibirMelhorVaga(melhorVaga) {
     let divMelhorVaga = document.getElementById("melhor-vaga");
     divMelhorVaga.innerHTML = "";
@@ -164,84 +165,8 @@ export function exibirMelhorVaga(melhorVaga) {
     });
     let salarioMelhor = document.createElement("p");
     let modalidadeMelhor = document.createElement("p");
-    let experienciaMesMelhor = document.createElement("p");
 
-    
     divMelhorVaga.style.display = "flex";
-    divMelhorVaga.style.backgroundColor = "var(--cor-card-melhor)";
-    tituloMelhorVaga.className = "titulo-melhor-vaga";
-    cargoMelhor.className = "cargo-melhor-vaga";
-    areaMelhor.className = "sobre-melhor-vaga";
-    requisitosAtendidosMelhor.className = "requisitos-atendidos-melhor-vagas";
-    requisitosFaltantesMelhor.className = "requisitos-faltantes-melhor-vagas";
-    salarioMelhor.className = "salario-melhor";
-    modalidadeMelhor.className = "modalidade-melhor";
-    experienciaMesMelhor.className = "experiencia-mes-melhor";
-
-
-
-    tituloMelhorVaga.textContent = melhorVaga.empresa;
-    cargoMelhor.textContent = melhorVaga.cargo;
-    areaMelhor.textContent = `Área: ${melhorVaga.area}`;
-    textoRequisitoAtendidoMelhor.textContent = "Requisitos atendidos:";
-    textoRequisitoFaltanteMelhor.textContent = "Requisitos faltantes:";
-    salarioMelhor.textContent = `Salário é de R$:${melhorVaga.salario} por mês`;
-    modalidadeMelhor.textContent = `Tipo: ${melhorVaga.modalidade}`;
-    experienciaMesMelhor.textContent = melhorVaga.textoExperiencia;
-
-
-    divMelhorVaga.appendChild(tituloMelhorVaga);
-    divMelhorVaga.appendChild(cargoMelhor);
-    divMelhorVaga.appendChild(areaMelhor);
-    divMelhorVaga.appendChild(textoRequisitoAtendidoMelhor);
-    divMelhorVaga.appendChild(requisitosAtendidosMelhor);
-    divMelhorVaga.appendChild(textoRequisitoFaltanteMelhor);
-    divMelhorVaga.appendChild(requisitosFaltantesMelhor);
-    divMelhorVaga.appendChild(salarioMelhor);
-    divMelhorVaga.appendChild(modalidadeMelhor);
-    divMelhorVaga.appendChild(experienciaMesMelhor);
-
-    
-    
-};
-
-
-
-
-
-
-
-
-
-
-export function exibirMelhorVaga(melhorVaga) {
-    let divMelhorVaga = document.getElementById("melhor-vaga");
-    divMelhorVaga.innerHTML = "";
-    let tituloMelhorVaga = document.createElement("h3");
-    let cargoMelhor = document.createElement("p");
-    let areaMelhor = document.createElement("p");
-    let requisitosAtendidosMelhor = document.createElement("ul");
-    let requisitosFaltantesMelhor = document.createElement("ul");
-    let textoRequisitoAtendidoMelhor = document.createElement("p");
-    let textoRequisitoFaltanteMelhor = document.createElement("p");
-    melhorVaga.requisitosAtendidos.forEach(requisito => {
-        let valorListaAtendidosMelhor = document.createElement("li");
-            
-        valorListaAtendidosMelhor.textContent = requisito;
-            
-        requisitosAtendidosMelhor.appendChild(valorListaAtendidosMelhor);
-    });
-    melhorVaga.requisitosFaltantes.forEach(requisito => {
-        let valorListaFaltantesMelhor = document.createElement("li");
-
-        valorListaFaltantesMelhor.textContent = requisito;
-        
-        requisitosFaltantesMelhor.appendChild(valorListaFaltantesMelhor);
-    });
-    let salarioMelhor = document.createElement("p");
-    let modalidadeMelhor = document.createElement("p");
-
-
     tituloMelhorVaga.className = "titulo-melhor-vaga";
     cargoMelhor.className = "cargo-melhor-vaga";
     areaMelhor.className = "sobre-melhor-vaga";
@@ -306,7 +231,7 @@ export function textoPontosEstudar(candidato, melhorVaga) {
     let estudarFaltantes = document.getElementById("recomendacao-estudo");
     let textoEstudo = document.getElementById("texto-estudo")
     
-
+    textoEstudo.style.display = "block";
     textoEstudo.textContent = `Olá ${candidato.nome}, recomendamos a você que estude ${melhorVaga.requisitosFaltantes} para alcançar 100% dos requisitos da vaga mais
     compatível com o seu perfil. Você pode optar por assistir vídeo no Youtube ou Realizar cursos sobre os conteúdos que você ainda não domina para obter o conhecimento
     e alcançar suas metas!`;
